@@ -45,9 +45,7 @@
             
             mysql_select_db('cagon') or die ('No se pudo seleccionar la base de datos');
             
-            $query = "INSERT INTO usuario (codigo, nombres, apellidos, fechaNacimiento, fechaIngreso, agencia, departamento, 
-                puesto, sueldoBase, bonificacion, extension, otroTelefono, usuario, password, correoElectronico) VALUES(NULL, NULL, NULL, NULL,
-                    NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '$usuario', '$password', '$email')";
+            $query = "INSERT INTO usuario (usuario, password, correoElectronico) VALUES('$usuario', '$password', '$email')";
             
             if(mysql_query($query)){
                 
