@@ -41,7 +41,7 @@
             $email = $_POST['email'];
             $password = $_POST['password'];
             
-            $connection = mysql_connect('localhost', 'root', '') or die ('No se pudo realizar la conexión.');
+            mysql_connect('localhost', 'root', '') or die ('No se pudo realizar la conexión.');
             
             mysql_select_db('cagon') or die ('No se pudo seleccionar la base de datos');
             
